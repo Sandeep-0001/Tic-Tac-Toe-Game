@@ -18,6 +18,7 @@ const resetGame= () =>{
     turn0=false;
     enableBox();
     msgconatainer.classList.add("hide");
+    main1.classList.remove("box-hide");
 }
 boxes.forEach((box) => {
     box.addEventListener("click",() => {
@@ -48,6 +49,7 @@ const showWinner=(winner) =>{
     msg.innerText = `Congratulatioins, Winner is ${winner} `;
     msgconatainer.classList.remove("hide");
     disableBox();
+    main1.classList.add("box-hide");
 };
 const checkWinner=() =>{
     let isWinner = false;
@@ -76,6 +78,7 @@ const checkWinner=() =>{
             msg.innerText = `It's a Draw!`;
             msgconatainer.classList.remove("hide");
             disableBox();
+            main1.classList.add("box-hide");
         }
     }
 };
